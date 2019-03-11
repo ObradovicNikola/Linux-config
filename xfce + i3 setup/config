@@ -134,8 +134,10 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 assign [class="Code"] $workspace2
 assign [class="Xfce4-terminal"] $workspace3
+assign [class="Steam"] $workspace6
 assign [class="Thunderbird"] $workspace7
 assign [class="Pidgin"] $workspace8
+assign [class="discord"] $workspace8
 assign [class="Gimp"] $workspace9
 assign [class="Rhythmbox"] $workspace10
 
@@ -232,6 +234,8 @@ bindsym Shift+F1 exec pavucontrol
 
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+q exec code
+bindsym $mod+o exec discord
+bindsym $mod+Shift+o exec pidgin
 #bindsym Print xfce baplindings
 
 
