@@ -4,7 +4,7 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
+	
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -101,7 +101,7 @@ set $workspace1 "1: Internet "
 set $workspace2 "2: Code "
 set $workspace3 "3: Terminals "
 set $workspace4 "4: Database "
-set $workspace5 "5: Unreal "
+set $workspace5 "5: GameDev "
 set $workspace6 "6: Gaming "
 set $workspace7 "7: E-mail "
 set $workspace8 "8: Coms "
@@ -134,12 +134,15 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 assign [class="Code"] $workspace2
 assign [class="Xfce4-terminal"] $workspace3
+assign [class="Transmission-gtk"] $workspace3
+assign [class="Mysql-workbench-bin"] $workspace4
 assign [class="Steam"] $workspace6
 assign [class="Thunderbird"] $workspace7
 assign [class="Pidgin"] $workspace8
 assign [class="discord"] $workspace8
 assign [class="Gimp"] $workspace9
 assign [class="Rhythmbox"] $workspace10
+
 
 bindsym Mod1+Tab workspace back_and_forth
 
@@ -233,7 +236,9 @@ bindsym Mod1+F3 exec --no-startup-id pactl set-sink-volume 1 +5% ; exec pkill -R
 bindsym Shift+F1 exec pavucontrol
 
 bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+g exec google-chrome
 bindsym $mod+q exec code
+bindsym $mod+t exec transmission-gtk
 bindsym $mod+o exec discord
 bindsym $mod+Shift+o exec pidgin
 #bindsym Print xfce baplindings
@@ -244,3 +249,4 @@ bindsym $mod+Shift+z exec ~/.scripts/prompt.sh "Are you sure you want to reboot?
 
 # execute
 #exec --no-startup-id compton -f
+exec transmission-gtk
